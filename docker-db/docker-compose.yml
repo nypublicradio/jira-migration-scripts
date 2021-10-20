@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  jiradatabase:
+    build: ./jiradatabase
+    ports:
+      - "5432:5432"
+  jiraclient:
+    build: ./jiraclient
+    ports:
+      - "5000:5000"
+
