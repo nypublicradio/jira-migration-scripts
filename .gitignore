@@ -1,0 +1,5 @@
+*.csv
+*.txt
+/attachments
+/migration_logs
+.venv/

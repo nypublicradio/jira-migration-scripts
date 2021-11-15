@@ -1,8 +1,11 @@
 import requests
 import os
+import sys
 
 # grab this from an old-jira session after you've logged in
-auth_cookie = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+auth_cookie = ''#TODO: INSERT YOUR ACTUAL COOKIE'
+if not auth_cookie:
+    sys.exit("You must provide a valid JIRA auth cookie")
 
 s = requests.Session()
 s.headers.update({'Cookie': auth_cookie})
